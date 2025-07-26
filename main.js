@@ -360,7 +360,7 @@ export async function playInitialSound(initial, index) {
    gameState.learnedInitials = gameState.learnedInitialsSet.size;
    updateProgress('initials-progress', gameState.learnedInitials, initials.length);
    
-   updateScore(10);
+   // 注意：移除了 updateScore(10) 计分逻辑，仅保留听一听环节的计分
 }
 
 // 播放韵母音频
@@ -391,7 +391,7 @@ async function playFinalSound(final, index) {
    gameState.learnedFinals = gameState.learnedFinalsSet.size;
    updateProgress('finals-progress', gameState.learnedFinals, finals.length);
    
-   updateScore(10);
+   // 注意：移除了 updateScore(10) 计分逻辑，仅保留听一听环节的计分
 }
 
 // 播放声调（使用yindiao.json）
@@ -435,7 +435,7 @@ async function playWholeSyllableSound(syllable, index) {
     gameState.learnedWholeSyllables = gameState.learnedWholeSyllablesSet.size;
     updateProgress('wholeSyllables-progress', gameState.learnedWholeSyllables, wholeSyllables.length);
 
-    updateScore(10);
+    // 注意：移除了 updateScore(10) 计分逻辑，仅保留听一听环节的计分
 }
 
 // 语音播放 (使用Web Speech API) - 简化版
