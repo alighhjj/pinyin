@@ -1,0 +1,450 @@
+{
+    "a": {
+        "url": "pinyin-audios/a.mp3",
+        "icon": "a 啊"
+    },
+    "b": {
+        "url": "pinyin-audios/b.mp3",
+        "icon": "b 玻"
+    },
+    "p": {
+        "url": "pinyin-audios/p.mp3",
+        "icon": "p 坡"
+    },
+    "m": {
+        "url": "pinyin-audios/m.mp3",
+        "icon": "m 摸"
+    },
+    "f": {
+        "url": "pinyin-audios/f.mp3",
+        "icon": "f 佛"
+    },
+    "d": {
+        "url": "pinyin-audios/d.mp3",
+        "icon": "d 得"
+    },
+    "t": {
+        "url": "pinyin-audios/t.mp3",
+        "icon": "t 特"
+    },
+    "n": {
+        "url": "pinyin-audios/n.mp3",
+        "icon": "n 讷"
+    },
+    "l": {
+        "url": "pinyin-audios/l.mp3",
+        "icon": "l 勒"
+    },
+    "g": {
+        "url": "pinyin-audios/g.mp3",
+        "icon": "g 歌"
+    },
+    "k": {
+        "url": "pinyin-audios/k.mp3",
+        "icon": "k 科"
+    },
+    "h": {
+        "url": "pinyin-audios/h.mp3",
+        "icon": "h 喝"
+    },
+    "j": {
+        "url": "pinyin-audios/j.mp3",
+        "icon": "j 基"
+    },
+    "q": {
+        "url": "pinyin-audios/q.mp3",
+        "icon": "q 欺"
+    },
+    "x": {
+        "url": "pinyin-audios/x.mp3",
+        "icon": "x 希"
+    },
+    "zh": {
+        "url": "pinyin-audios/zh.mp3",
+        "icon": "zh 知"
+    },
+    "ch": {
+        "url": "pinyin-audios/ch.mp3",
+        "icon": "ch 蚩"
+    },
+    "sh": {
+        "url": "pinyin-audios/sh.mp3",
+        "icon": "sh 思"
+    },
+    "r": {
+        "url": "pinyin-audios/r.mp3",
+        "icon": "r 日"
+    },
+    "z": {
+        "url": "pinyin-audios/z.mp3",
+        "icon": "z 资"
+    },
+    "c": {
+        "url": "pinyin-audios/c.mp3",
+        "icon": "c 雌"
+    },
+    "s": {
+        "url": "pinyin-audios/s.mp3",
+        "icon": "s 思"
+    },
+    "y": {
+        "url": "pinyin-audios/y.mp3",
+        "icon": "y 衣"
+    },
+    "w": {
+        "url": "pinyin-audios/w.mp3",
+        "icon": "w 乌"
+    },
+    "ɑ": {
+        "url": "pinyin-audios/ɑ.mp3",
+        "icon": "ɑ 啊"
+    },
+    "o": {
+        "url": "pinyin-audios/o.mp3",
+        "icon": "o 喔"
+    },
+    "e": {
+        "url": "pinyin-audios/e.mp3",
+        "icon": "e 鹅"
+    },
+    "i": {
+        "url": "pinyin-audios/i.mp3",
+        "icon": "i 衣"
+    },
+    "u": {
+        "url": "pinyin-audios/u.mp3",
+        "icon": "u 乌"
+    },
+    "ü": {
+        "url": "pinyin-audios/ü.mp3",
+        "icon": "ü 迂"
+    },
+    "ai": {
+        "url": "pinyin-audios/ai.mp3",
+        "icon": "ai 哀"
+    },
+    "ei": {
+        "url": "pinyin-audios/ei.mp3",
+        "icon": "ei 诶"
+    },
+    "ui": {
+        "url": "pinyin-audios/ui.mp3",
+        "icon": "ui 威"
+    },
+    "ao": {
+        "url": "pinyin-audios/ao.mp3",
+        "icon": "ao 熬"
+    },
+    "ou": {
+        "url": "pinyin-audios/ou.mp3",
+        "icon": "ou 欧"
+    },
+    "iu": {
+        "url": "pinyin-audios/iu.mp3",
+        "icon": "iu 优"
+    },
+    "ie": {
+        "url": "pinyin-audios/ie.mp3",
+        "icon": "ie 耶"
+    },
+    "üe": {
+        "url": "pinyin-audios/üe.mp3",
+        "icon": "üe 约"
+    },
+    "er": {
+        "url": "pinyin-audios/er.mp3",
+        "icon": "er 耳"
+    },
+    "an": {
+        "url": "pinyin-audios/an.mp3",
+        "icon": "an 安"
+    },
+    "en": {
+        "url": "pinyin-audios/en.mp3",
+        "icon": "en 恩"
+    },
+    "in": {
+        "url": "pinyin-audios/in.mp3",
+        "icon": "in 因"
+    },
+    "un": {
+        "url": "pinyin-audios/un.mp3",
+        "icon": "un 温"
+    },
+    "ün": {
+        "url": "pinyin-audios/ün.mp3",
+        "icon": "ün 晕"
+    },
+    "ang": {
+        "url": "pinyin-audios/ang.mp3",
+        "icon": "ang 昂"
+    },
+    "eng": {
+        "url": "pinyin-audios/eng.mp3",
+        "icon": "eng 享"
+    },
+    "ing": {
+        "url": "pinyin-audios/ing.mp3",
+        "icon": "ing 英"
+    },
+    "ong": {
+        "url": "pinyin-audios/ong.mp3",
+        "icon": "ong 翁"
+    },
+    "zhi": {
+        "url": "pinyin-audios/zhi.mp3",
+        "icon": "zhi 织"
+    },
+    "chi": {
+        "url": "pinyin-audios/chi.mp3",
+        "icon": "chi 吃"
+    },
+    "shi": {
+        "url": "pinyin-audios/shi.mp3",
+        "icon": "shi 狮"
+    },
+    "ri": {
+        "url": "pinyin-audios/ri.mp3",
+        "icon": "ri 日"
+    },
+    "zi": {
+        "url": "pinyin-audios/zi.mp3",
+        "icon": "zi 资"
+    },
+    "ci": {
+        "url": "pinyin-audios/ci.mp3",
+        "icon": "ci 刺"
+    },
+    "si": {
+        "url": "pinyin-audios/si.mp3",
+        "icon": "si 丝"
+    },
+    "yi": {
+        "url": "pinyin-audios/yi.mp3",
+        "icon": "yi 衣"
+    },
+    "wu": {
+        "url": "pinyin-audios/wu.mp3",
+        "icon": "wu 屋"
+    },
+    "yu": {
+        "url": "pinyin-audios/yu.mp3",
+        "icon": "yu 雨"
+    },
+    "ye": {
+        "url": "pinyin-audios/ye.mp3",
+        "icon": "ye 椰"
+    },
+    "yue": {
+        "url": "pinyin-audios/yue.mp3",
+        "icon": "yue 月"
+    },
+    "yuan": {
+        "url": "pinyin-audios/yuan.mp3",
+        "icon": "yuan 圆"
+    },
+    "yin": {
+        "url": "pinyin-audios/yin.mp3",
+        "icon": "yin 印"
+    },
+    "yun": {
+        "url": "pinyin-audios/yun.mp3",
+        "icon": "yun 云"
+    },
+    "ying": {
+        "url": "pinyin-audios/ying.mp3",
+        "icon": "ying 鹰"
+    },
+    "mā": {
+        "url": "pinyin-audios/ma1.mp3",
+        "icon": "mā 妈"
+    },
+    "má": {
+        "url": "pinyin-audios/ma2.mp3",
+        "icon": "má 麻"
+    },
+    "mǎ": {
+        "url": "pinyin-audios/ma3.mp3",
+        "icon": "mǎ 马"
+    },
+    "mà": {
+        "url": "pinyin-audios/ma4.mp3",
+        "icon": "mà 骂"
+    },
+    "bā": {
+        "url": "pinyin-audios/ba1.mp3",
+        "icon": "bā 八"
+    },
+    "bá": {
+        "url": "pinyin-audios/ba2.mp3",
+        "icon": "bá 拔"
+    },
+    "bǎ": {
+        "url": "pinyin-audios/ba3.mp3",
+        "icon": "bǎ 把"
+    },
+    "bà": {
+        "url": "pinyin-audios/ba4.mp3",
+        "icon": "bà 爸"
+    },
+    "pī": {
+        "url": "pinyin-audios/pi1.mp3",
+        "icon": "pī 劈"
+    },
+    "pí": {
+        "url": "pinyin-audios/pi2.mp3",
+        "icon": "pí 皮"
+    },
+    "pǐ": {
+        "url": "pinyin-audios/pi3.mp3",
+        "icon": "pǐ 匹"
+    },
+    "pì": {
+        "url": "pinyin-audios/pi4.mp3",
+        "icon": "pì 譬"
+    },
+    "dī": {
+        "url": "pinyin-audios/di1.mp3",
+        "icon": "dī 低"
+    },
+    "dí": {
+        "url": "pinyin-audios/di2.mp3",
+        "icon": "dí 敌"
+    },
+    "dǐ": {
+        "url": "pinyin-audios/di3.mp3",
+        "icon": "dǐ 底"
+    },
+    "dì": {
+        "url": "pinyin-audios/di4.mp3",
+        "icon": "dì 地"
+    },
+    "gū": {
+        "url": "pinyin-audios/gu1.mp3",
+        "icon": "gū 姑"
+    },
+    "gú": {
+        "url": "pinyin-audios/gu2.mp3",
+        "icon": "gú 谷"
+    },
+    "gǔ": {
+        "url": "pinyin-audios/gu3.mp3",
+        "icon": "gǔ 古"
+    },
+    "gù": {
+        "url": "pinyin-audios/gu4.mp3",
+        "icon": "gù 故"
+    },
+    "hē": {
+        "url": "pinyin-audios/he1.mp3",
+        "icon": "hē 喝"
+    },
+    "hé": {
+        "url": "pinyin-audios/he2.mp3",
+        "icon": "hé 河"
+    },
+    "hě": {
+        "url": "pinyin-audios/he3.mp3",
+        "icon": "hě"
+    },
+    "hè": {
+        "url": "pinyin-audios/he4.mp3",
+        "icon": "hè 贺"
+    },
+    "jī": {
+        "url": "pinyin-audios/ji1.mp3",
+        "icon": "jī 鸡"
+    },
+    "jí": {
+        "url": "pinyin-audios/ji2.mp3",
+        "icon": "jí 集"
+    },
+    "jǐ": {
+        "url": "pinyin-audios/ji3.mp3",
+        "icon": "jǐ 己"
+    },
+    "jì": {
+        "url": "pinyin-audios/ji4.mp3",
+        "icon": "jì 记"
+    },
+    "qī": {
+        "url": "pinyin-audios/qi1.mp3",
+        "icon": "qī 七"
+    },
+    "qí": {
+        "url": "pinyin-audios/qi2.mp3",
+        "icon": "qí 旗"
+    },
+    "qǐ": {
+        "url": "pinyin-audios/qi3.mp3",
+        "icon": "qǐ 起"
+    },
+    "qì": {
+        "url": "pinyin-audios/qi4.mp3",
+        "icon": "qì 气"
+    },
+    "xī": {
+        "url": "pinyin-audios/xi1.mp3",
+        "icon": "xī 西"
+    },
+    "xí": {
+        "url": "pinyin-audios/xi2.mp3",
+        "icon": "xí 习"
+    },
+    "xǐ": {
+        "url": "pinyin-audios/xi3.mp3",
+        "icon": "xǐ 喜"
+    },
+    "xì": {
+        "url": "pinyin-audios/xi4.mp3",
+        "icon": "xì 戏"
+    },
+    "zhū": {
+        "url": "pinyin-audios/zhu1.mp3",
+        "icon": "zhū 猪"
+    },
+    "zhú": {
+        "url": "pinyin-audios/zhu2.mp3",
+        "icon": "zhú 竹"
+    },
+    "zhǔ": {
+        "url": "pinyin-audios/zhu3.mp3",
+        "icon": "zhǔ 主"
+    },
+    "zhù": {
+        "url": "pinyin-audios/zhu4.mp3",
+        "icon": "zhù 住"
+    },
+    "chī": {
+        "url": "pinyin-audios/chi1.mp3",
+        "icon": "chī 吃"
+    },
+    "chí": {
+        "url": "pinyin-audios/chi2.mp3",
+        "icon": "chí 池"
+    },
+    "chǐ": {
+        "url": "pinyin-audios/chi3.mp3",
+        "icon": "chǐ 齿"
+    },
+    "chì": {
+        "url": "pinyin-audios/chi4.mp3",
+        "icon": "chì 赤"
+    },
+    "shī": {
+        "url": "pinyin-audios/shi1.mp3",
+        "icon": "shī 狮"
+    },
+    "shí": {
+        "url": "pinyin-audios/shi2.mp3",
+        "icon": "shí 石"
+    },
+    "shǐ": {
+        "url": "pinyin-audios/shi3.mp3",
+        "icon": "shǐ 使"
+    },
+    "shì": {
+        "url": "pinyin-audios/shi4.mp3",
+        "icon": "shì 是"
+    }
+}

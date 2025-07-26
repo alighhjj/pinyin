@@ -1,0 +1,255 @@
+{
+    "b": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/b.mp3",
+        "icon": "b 玻"
+    },
+    "p": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/p.mp3",
+        "icon": "p 坡"
+    },
+    "m": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/m.mp3",
+        "icon": "m 摸"
+    },
+    "f": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/f.mp3",
+        "icon": "f 佛"
+    },
+    "d": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/d.mp3",
+        "icon": "d 得"
+    },
+    "t": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/t.mp3",
+        "icon": "t 特"
+    },
+    "n": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/n.mp3",
+        "icon": "n 讷"
+    },
+    "l": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/l.mp3",
+        "icon": "l 勒"
+    },
+    "g": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/g.mp3",
+        "icon": "g 歌"
+    },
+    "k": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/k.mp3",
+        "icon": "k 科"
+    },
+    "h": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/h.mp3",
+        "icon": "h 喝"
+    },
+    "j": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/j.mp3",
+        "icon": "j 基"
+    },
+    "q": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/q.mp3",
+        "icon": "q 欺"
+    },
+    "x": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/x.mp3",
+        "icon": "x 希"
+    },
+    "zh": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/zh.mp3",
+        "icon": "zh 知"
+    },
+    "ch": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ch.mp3",
+        "icon": "ch 蚩"
+    },
+    "sh": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/sh.mp3",
+        "icon": "sh 思"
+    },
+    "r": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/r.mp3",
+        "icon": "r 日"
+    },
+    "z": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/z.mp3",
+        "icon": "z 资"
+    },
+    "c": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/c.mp3",
+        "icon": "c 雌"
+    },
+    "s": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/s.mp3",
+        "icon": "s 思"
+    },
+    "y": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/y.mp3",
+        "icon": "y 衣"
+    },
+    "w": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/w.mp3",
+        "icon": "w 乌"
+    },
+    "a": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/a.mp3",
+        "icon": "a 啊"
+
+    },
+    "o": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/o.mp3",
+        "icon": "o 喔"
+    },
+    "e": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/e.mp3",
+        "icon": "e 鹅"
+    },
+    "i": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/i.mp3",
+        "icon": "i 衣"
+    },
+    "u": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/u.mp3",
+        "icon": "u 乌"
+    },
+    "ü": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/v.mp3",
+        "icon": "ü 迂"
+    },
+    "ai": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ai.mp3",
+        "icon": "ai 哀"
+    },
+    "ei": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ei.mp3",
+        "icon": "ei 诶"
+    },
+    "ui": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ui.mp3",
+        "icon": "ui 威"
+    },
+    "ao": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ao.mp3",
+        "icon": "ao 熬"
+    },
+    "ou": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ou.mp3",
+        "icon": "ou 欧"
+    },
+    "iu": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/iu.mp3",
+        "icon": "iu 优"
+    },
+    "ie": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ie.mp3",
+        "icon": "ie 耶"
+    },
+    "üe": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ve.mp3",
+        "icon": "üe 约"
+    },
+    "er": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/er.mp3",
+        "icon": "er 耳"
+    },
+    "an": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/an.mp3",
+        "icon": "an 安"
+    },
+    "en": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/en.mp3",
+        "icon": "en 恩"
+    },
+    "in": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/in.mp3",
+        "icon": "in 因"
+    },
+    "un": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/un.mp3",
+        "icon": "un 温"
+    },
+    "ün": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/vn.mp3",
+        "icon": "ün 晕"
+    },
+    "ang": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ang.mp3",
+        "icon": "ang 昂"
+    },
+    "eng": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/eng.mp3",
+        "icon": "eng 享"
+    },
+    "ing": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ing.mp3",
+        "icon": "ing 英"
+    },
+    "ong": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ong.mp3",
+        "icon": "ong 翁"
+    },
+    "zhi": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/zhi1.mp3",
+        "icon": "zhi 织"
+    },
+    "chi": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/chi1.mp3",
+        "icon": "chi 吃"
+    },
+    "shi": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/shi1.mp3",
+        "icon": "shi 狮"
+    },
+    "ri": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ri1.mp3",
+        "icon": "ri 日"
+    },
+    "zi": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/zi1.mp3",
+        "icon": "zi 资"
+    },
+    "ci": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ci1.mp3",
+        "icon": "ci 刺"
+    },
+    "si": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/si1.mp3",
+        "icon": "si 丝"
+    },
+    "yi": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/yi1.mp3",
+        "icon": "yi 衣"
+    },
+    "wu": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/wu1.mp3",
+        "icon": "wu 屋"
+    },
+    "yu": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/yu1.mp3",
+        "icon": "yu 雨"
+    },
+    "ye": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ye1.mp3",
+        "icon": "ye 椰"
+    },
+    "yue": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/yue1.mp3",
+        "icon": "yue 月"
+    },
+    "yuɑn": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/yuan1.mp3",
+        "icon": "yuɑn 圆"
+    },
+    "yin": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/yin1.mp3",
+        "icon": "yin 印"
+    },
+    "yun": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/yun1.mp3",
+        "icon": "yun 云"
+    },
+    "ying": {
+        "url": "http://du.hanyupinyin.cn/du/pinyin/ying1.mp3",
+        "icon": "ying 鹰"
+    }
+}
