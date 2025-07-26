@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>网页语音合成示例</title>
+</head>
+<body>
+  <h1>网页语音合成（TTS）示例</h1>
+
+  <textarea id="text-to-speak" rows="4" cols="50">你好，这是一个网页语音合成的示例。</textarea><br><br>
+  <button id="speak-button">播放语音</button>
+  <button id="pause-button">暂停</button>
+  <button id="resume-button">继续</button>
+  <button id="stop-button">停止</button>
+
+  <script>
+    const textInput = document.getElementById('text-to-speak');
+    const speakButton = document.getElementById('speak-button');
+    const pauseButton = document.getElementById('pause-button');
+    const resumeButton = document.getElementById('resume-button');
+    const stopButton = document.getElementById('stop-button');
+
+    const synth = window.speechSynthesis; // 获取语音合成对象
+
+    speakButton.addEventListener('click', () => {
+      const text = textInput.value;
+      if (!text) {
+        alert('请输入要朗读的文字');
+        return;
+      }
+
+      // 创建语音对象
+      const utterance = new SpeechSynthesisUtterance(text);
+
+      // 可选：设置语音语言（默认跟随浏览器）
+      // utterance.lang = 'zh-CN'; // 中文
+      // utterance.lang = 'en-US'; // 英文
+
+      // 可选：设置语速（0.1 ~ 10）
+      // utterance.rate = 1.0;
+
+      // 可选：设置音调（0 ~ 2）
+      // utterance.pitch = 1.0;
+
+      // 开始朗读
+      synth.speak(utterance);
+    });
+
+    pauseButton.addEventListener('click', () => {
+      if (synth.speaking) {
+        synth.pause();
+      }
+    });
+
+    resumeButton.addEventListener('click', () => {
+      if (synth.paused) {
+        synth.resume();
+      }
+    });
+
+    stopButton.addEventListener('click', () => {
+      synth.cancel(); // 停止并清空队列
+    });
+  </script>
+</body>
+</html>

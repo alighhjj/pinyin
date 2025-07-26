@@ -6,8 +6,6 @@ import { createWholeSyllablesListenGameUI, generateWholeSyllablesListenQuestion,
 import { createTonesListenGameUI, generateToneListenQuestion, checkToneAnswerResult } from './listenjs/tone-listen-game.js';
 import { generateClassificationQuestion, checkClassificationAnswer } from './listenjs/classification-game.js';
 
-// 移除 ESM 导入，使用全局 EasySpeech 对象
-let EasySpeechModule;
 
 // 游戏状态
 export let gameState = {
@@ -440,89 +438,18 @@ async function playWholeSyllableSound(syllable, index) {
     updateScore(10);
 }
 
-// 语音播放 (使用Web Speech API)
+// 语音播放 (使用Web Speech API) - 简化版
 function speak(text) {
    if ('speechSynthesis' in window && gameState.soundEnabled) {
-       // 停止之前的语音
-       speechSynthesis.cancel();
-       
+       // 创建语音对象
        const utterance = new SpeechSynthesisUtterance(text);
+       
+       // 设置语言
        utterance.lang = 'zh-CN';
-       utterance.rate = 0.8;
-       utterance.pitch = 1.2;
-       utterance.volume = 0.8;
        
-       // 使用设置的语音
-       if (gameState.voice) {
-           utterance.voice = gameState.voice;
-       }
-       
-       // 添加事件监听器以处理语音播放完成或错误
-       utterance.onend = function(event) {
-           console.log('语音播放完成');
-       };
-       
-       utterance.onerror = function(event) {
-           console.error('语音播放出错:', event);
-           // 如果使用了特定语音导致错误，尝试使用默认语音
-           if (gameState.voice) {
-               console.log('尝试使用默认语音重新播放');
-               utterance.voice = null;
-               speechSynthesis.speak(utterance);
-           }
-       };
-       
-       // iOS Safari 需要用户交互后才能播放语音
-       // 检查是否在用户交互上下文中
-       const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-       if (isIOS) {
-           console.log('在iOS设备上，确保在用户交互上下文中播放');
-           // 在iOS设备上，我们可能需要延迟播放以确保在用户交互上下文中
-           setTimeout(() => {
-               speechSynthesis.speak(utterance);
-           }, 100);
-       } else {
-           speechSynthesis.speak(utterance);
-       }
+       // 开始朗读
+       speechSynthesis.speak(utterance);
    }
-}
-
-// 播放正确答案音效
-function playCorrectSound() {
-    // 使用Web Speech API播放正确音效
-    if ('speechSynthesis' in window && gameState.soundEnabled) {
-        const utterance = new SpeechSynthesisUtterance("答对了");
-        utterance.lang = 'zh-CN';
-        utterance.rate = 1.0;
-        utterance.pitch = 1.5; // 更高的音调表示正确
-        utterance.volume = 0.8;
-        
-        // 使用设置的语音
-        if (gameState.voice) {
-            utterance.voice = gameState.voice;
-        }
-        
-        speechSynthesis.speak(utterance);
-    }
-}
-
-// 播放错误答案音效
-function playWrongSound() {
-    // 使用Web Speech API播放错误音效
-    if ('speechSynthesis' in window && gameState.soundEnabled) {
-        const utterance = new SpeechSynthesisUtterance("不对");
-        utterance.lang = 'zh-CN';
-        utterance.rate = 0.8;
-        utterance.pitch = 0.5; // 更低的音调表示错误
-        utterance.volume = 0.8;
-        
-        // 使用设置的语音
-        if (gameState.voice) {
-            utterance.voice = gameState.voice;
-        }
-        
-        speechSynthesis.speak(utterance);
-    }
 }
 
 // 播放音频文件
@@ -759,167 +686,9 @@ function toggleSound() {
 window.toggleMusic = toggleMusic;
 window.toggleSound = toggleSound;
 
-// 初始化EasySpeech
-async function initEasySpeech() {
-    try {
-        // 使用全局 EasySpeech 对象
-        const EasySpeechLib = window.EasySpeech;
-        
-        if (!EasySpeechLib) {
-            console.warn('EasySpeech 不可用，将使用浏览器原生语音API');
-            return;
-        }
-        
-        await EasySpeechLib.init({
-            maxTimeout: 5000,
-            interval: 250
-        });
-        
-        // 获取中文语音
-        // 在iOS Safari上，有时需要等待一段时间才能获取到完整的语音列表
-        let voices = await EasySpeechLib.voices();
-        console.log('初始可用语音:', voices);
-        
-        // 检测平台类型
-        const userAgent = navigator.userAgent.toLowerCase();
-        const isAppleDevice = /iphone|ipad|ipod|macintosh/.test(userAgent);
-        const isIOS = /iphone|ipad|ipod/.test(userAgent);
-        console.log('是否为苹果设备:', isAppleDevice);
-        console.log('是否为iOS设备:', isIOS);
-        console.log('User Agent:', userAgent);
-        
-        // 如果是iOS设备且语音列表为空或不完整，稍等后再次获取
-        if (isIOS && (!voices || voices.length === 0 || !voices.some(v => v.lang.includes('zh')))) {
-            console.log('iOS设备上语音列表可能不完整，等待后重新获取');
-            // 等待一段时间再尝试获取语音列表
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            voices = await EasySpeechLib.voices();
-            console.log('重新获取的语音列表:', voices);
-        }
-        
-        // 根据平台选择语音
-        let chineseVoice = null;
-        
-        if (isAppleDevice) {
-            // 苹果设备特殊处理
-            console.log('开始苹果设备语音选择逻辑');
-            
-            // 首先寻找默认的中文语音
-            chineseVoice = voices.find(v => 
-                v.lang.includes('zh') && 
-                v.default === true &&
-                !v.name.includes('Eddy')
-            );
-            
-            console.log('尝试匹配默认中文语音:', chineseVoice);
-            
-            // 如果没有找到默认语音或找到的是Eddy，则按优先级查找
-            if (!chineseVoice || chineseVoice.name.includes('Eddy')) {
-                // 对于iOS设备，优先级列表略有不同
-                const applePreferredVoices = isIOS ? [
-                    'Ting-Ting', 'Tingting', 'Sin-Ji', 'Sinji', 'Mei-Jia', 'Meijia', 'Yu-shu', 'Yushu'
-                ] : [
-                    'Ting-Ting', 'Tingting', 'Shasha', 'Huihui', 'Sinji', 'Kyoko', 'O-ren', 'Oren'
-                ];
-                
-                for (const voiceName of applePreferredVoices) {
-                    chineseVoice = voices.find(v => 
-                        (v.name.includes(voiceName) || v.name === voiceName) && 
-                        v.lang.includes('zh') &&
-                        !v.name.includes('Eddy')
-                    );
-                    if (chineseVoice) {
-                        console.log(`找到优先语音 ${voiceName}:`, chineseVoice);
-                        break;
-                    }
-                }
-            }
-            
-            // 如果还是没有找到合适的语音，选择任何非Eddy的中文语音
-            if (!chineseVoice || chineseVoice.name.includes('Eddy')) {
-                chineseVoice = voices.find(v => 
-                    v.lang.includes('zh') && 
-                    !v.name.includes('Eddy') &&
-                    !v.name.includes('Yunyang')
-                );
-                console.log('选择备选中文语音:', chineseVoice);
-            }
-        } else {
-            // 非苹果设备（主要是Windows）处理
-            console.log('开始非苹果设备语音选择逻辑');
-            
-            // Windows平台优先选择微软语音
-            const windowsPreferredVoices = [
-                'Microsoft Xiaoxiao Online (Natural) - Chinese (Mainland)',
-                'Microsoft Xiaoxiao - Chinese (Mainland)',
-                'Microsoft Yaoyao - Chinese (Mainland)'
-            ];
-            
-            // 首先尝试平台特定的首选语音
-            for (const voiceName of windowsPreferredVoices) {
-                chineseVoice = voices.find(v => 
-                    (v.name === voiceName || v.name.includes(voiceName)) && 
-                    (v.lang.includes('zh') || v.lang.includes('Chinese'))
-                );
-                if (chineseVoice) {
-                    console.log(`找到Windows优先语音 ${voiceName}:`, chineseVoice);
-                    break;
-                }
-            }
-            
-            // 如果没有找到平台特定语音，则选择任何中文语音
-            if (!chineseVoice) {
-                chineseVoice = voices.find(v => 
-                    (v.lang.includes('zh') || v.lang.includes('Chinese')) && 
-                    !v.name.includes('Yunyang')
-                );
-                console.log('选择通用中文语音:', chineseVoice);
-            }
-        }
-        
-        // 最后的备选方案：选择任何语音
-        if (!chineseVoice) {
-            chineseVoice = voices.find(v => 
-                v.lang.includes('zh') || v.lang.includes('Chinese')
-            );
-            console.log('最后选择任何中文语音:', chineseVoice);
-        }
-        
-        if (chineseVoice) {
-            // 确保最终选择的不是Eddy语音
-            if (chineseVoice.name.includes('Eddy')) {
-                console.warn('最终选择了Eddy语音，尝试寻找替代语音');
-                const alternativeVoice = voices.find(v => 
-                    (v.lang.includes('zh') || v.lang.includes('Chinese')) && 
-                    !v.name.includes('Eddy') &&
-                    !v.name.includes('Yunyang')
-                );
-                
-                if (alternativeVoice) {
-                    chineseVoice = alternativeVoice;
-                    console.log('替换为替代语音:', chineseVoice);
-                }
-            }
-            
-            gameState.voice = chineseVoice;
-            console.log('已找到并设置中文语音:', gameState.voice);
-            // 显示当前选择的语音信息
-            showSelectedVoiceInfo();
-        } else {
-            console.warn('未找到合适的中文语音');
-        }
-    } catch (e) {
-        console.error('语音初始化失败:', e);
-        console.warn('将使用浏览器原生语音API');
-    }
-}
-
-// 显示当前选择的语音信息
-function showSelectedVoiceInfo() {
-    if (gameState.voice) {
-        console.log('当前使用的语音库:', gameState.voice.name);
-        console.log('语音语言:', gameState.voice.lang);
-    }
+// 简化的语音初始化函数（移除复杂的语音选择逻辑）
+function initSpeech() {
+    // 不需要特殊的初始化，直接使用浏览器默认设置
 }
 
 // 页面加载完成初始化
@@ -1039,13 +808,6 @@ window.addEventListener('load', function() {
    // 初始化分数显示
    updateScoreDisplay();
    
-   // 播放欢迎音效（延迟确保语音已初始化）
-   setTimeout(() => {
-       if (gameState.soundEnabled) {
-           speak('欢迎来到拼音小世界！');
-       }
-   }, 2000);
-   
    // 添加键盘支持
    document.addEventListener('keydown', function(event) {
        if (event.key === 'Escape' && gameState.currentGame) {
@@ -1114,8 +876,8 @@ function loadProgress() {
 // 页面加载时恢复进度
 loadProgress();
 
-// 初始化EasySpeech
-initEasySpeech();
+// 初始化简化版语音
+initSpeech();
 
 // 加载拼音音频数据
 loadPinyinAudioData();
@@ -1712,20 +1474,3 @@ function checkTonesListenAnswer(selected) {
         }, 1000);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

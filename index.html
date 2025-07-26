@@ -429,41 +429,6 @@
             border-radius: 5px;
         }
     </style>
-    <script src="https://unpkg.com/easy-speech@latest/dist/EasySpeech.iife.js"></script>
-    <script>
-        // CDN 加载失败时的备用方案
-        window.addEventListener('error', function(e) {
-            if (e.target.tagName === 'SCRIPT' && e.target.src.includes('easy-speech')) {
-                console.warn('EasySpeech CDN 加载失败，将使用浏览器原生语音API');
-                // 创建一个简化版本的 EasySpeech 替代实现
-                window.EasySpeech = {
-                    init: () => Promise.resolve(),
-                    voices: () => Promise.resolve(speechSynthesis.getVoices()),
-                };
-            }
-        }, true);
-    </script>
-    <script>
-        // 检查可用语音库
-        function listAvailableVoices() {
-            if ('speechSynthesis' in window) {
-                // 延迟一点时间确保语音库加载完成
-                setTimeout(() => {
-                    const voices = speechSynthesis.getVoices();
-                    console.log('=== 可用的语音库 ===');
-                    voices.forEach((voice, index) => {
-                        console.log(`${index + 1}. ${voice.name} (${voice.lang}) ${voice.default ? '[默认]' : ''}`);
-                    });
-                    console.log('====================');
-                }, 1000);
-            } else {
-                console.log('当前浏览器不支持Web Speech API');
-            }
-        }
-        
-        // 页面加载时检查语音库
-        window.addEventListener('load', listAvailableVoices);
-    </script>
 </head>
 <body>
     <div class="container">
@@ -475,7 +440,6 @@
         <!-- 头部 -->
         <header class="header">
             <h1>🌈 拼音小世界 🌈</h1>
-            <p>和小熊猫一起快乐学拼音！</p>
         </header>
         
         <!-- 音频控制 -->

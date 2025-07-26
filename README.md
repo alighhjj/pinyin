@@ -30,7 +30,7 @@
 ## 依赖说明
 
 - 纯前端实现，无需后端。
-- 语音播放基于浏览器的 Web Speech API 和 EasySpeech 库。
+- 语音播放基于浏览器的 Web Speech API。
 - 音频文件使用 mp3 格式存储在 `pinyin-audios` 和 `tone-audios` 目录中。
 
 ## 目录结构
@@ -127,16 +127,14 @@ flowchart TD
 
 本应用优化了在不同设备上的语音播放体验：
 
-- **macOS**: 使用 Ting-Ting 语音合成
-- **iPad/iPhone**: 自动适配设备可用的最佳中文语音
-- **Windows**: 优先使用微软中文语音合成服务
+- **所有平台**: 使用浏览器原生 Web Speech API 实现语音播放
+- **iOS设备**: 通过简化API调用提高兼容性和语音质量
 
 ## 技术实现细节
 
 ### 语音处理
-- 使用 EasySpeech 库封装 Web Speech API
-- 针对不同平台（特别是苹果设备）优化语音选择逻辑
-- 实现了语音播放失败时的回退机制
+- 使用浏览器原生 Web Speech API
+- 简化了语音处理逻辑以提高在iOS设备上的兼容性
 
 ### 音频播放
 - 支持 mp3 音频文件播放
